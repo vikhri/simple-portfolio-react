@@ -1,0 +1,16 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+
+.projects__list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
+  row-gap: 24px;
+  list-style: none;
+  background-color: #FFFFFF;
+  padding: 12px 12px 40px;
+}

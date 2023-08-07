@@ -1,0 +1,25 @@
+.switcher {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;
+  padding: 12px;
+
+  background-color: #FFFFFF;
+  border-radius: 16px;
+}
+
+.switcher__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 14px;
+  border-radius: 10px;
+
+  color: var(--main-color);
+}
+
+.isCurrent {
+  background-color: #f1f2f4;
+
+}

@@ -1,0 +1,10 @@
+.socials {
+  display: flex;
+  align-items: center;
+  column-gap: 1em;
+  list-style: none;
+}
+
+.socials__link {
+  display: flex;
+}

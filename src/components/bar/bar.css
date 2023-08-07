@@ -1,0 +1,22 @@
+.button-bar {
+  display: flex;
+  column-gap: 12px;
+  padding: 12px;
+}
+
+.button-bar__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--main-color);
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.button-bar__link--small {
+  max-width: 68px;
+  background-color: #FFFFFF;
+  color: var(--main-color);
+}

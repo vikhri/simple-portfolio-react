@@ -1,0 +1,17 @@
+.button {
+  padding: 12px 24px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 8px;
+  color: #FFFFFF;
+  box-shadow: 10px 5px 25px lightgray;
+}
+
+.button__container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+
+}

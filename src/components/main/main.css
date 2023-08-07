@@ -1,0 +1,11 @@
+.main__container {
+  width: 700px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  margin: 0 auto;
+  padding: 24px;
+
+  background-color: inherit;
+}
