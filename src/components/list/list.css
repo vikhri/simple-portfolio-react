@@ -13,4 +13,11 @@
   list-style: none;
   background-color: #FFFFFF;
   padding: 12px 12px 40px;
+
+}
+
+@media (max-width: 500px) {
+  .projects__list {
+  grid-template-columns: 1fr;
+  }
 }
