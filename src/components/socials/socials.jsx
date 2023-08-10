@@ -15,24 +15,24 @@ const socialList = [
   }
 ]
 
-function Socials() {
+function Socials({themeIsDark}) {
   return (
-    <ul className='socials'>
+    <ul className={`socials ${themeIsDark && 'dark'}`}>
       {
         socialList.map((item) => (
-          <SocialsItem item={item} key={item.name}/>))
+          <SocialsItem themeIsDark={themeIsDark} item={item} key={item.name}/>))
       }
     </ul>
   )
 }
 
 // eslint-disable-next-line react/prop-types
-function SocialsItem({item}) {
+function SocialsItem({item, themeIsDark}) {
   return (
     <li className='socials__item'>
       <a className='socials__link'
         href={item.link}>
-        <img src={item.iconLight}/>
+        <img src={themeIsDark ? item.iconDark : item.iconLight}/>
       </a>
     </li>
   )

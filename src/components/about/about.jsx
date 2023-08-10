@@ -1,6 +1,6 @@
 import './about.css'
 
-function About() {
+function About({themeIsDark}) {
 
   const skills = {
     hardSkills: [
@@ -63,7 +63,7 @@ function About() {
   }
 
   return (
-    <div className='about'>
+    <div className={`about ${themeIsDark && 'dark'}`}>
       <div className='about__prolog'>
         <p>About About About bout About About bout About About bout About About bout About About bout About Aboutbout About About</p>
       </div>

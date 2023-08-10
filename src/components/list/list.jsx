@@ -55,9 +55,9 @@ const projects = [
   },
 ]
 
-function ProjectsList() {
+function ProjectsList({themeIsDark}) {
 
-  const [projectsQuantity, setProjectQuantity] = useState(1);
+  const [projectsQuantity, setProjectQuantity] = useState(4);
 
   function HandleLoadMore() {
     if (projects.length <= projectsQuantity) return;
@@ -66,11 +66,11 @@ function ProjectsList() {
 
 
   return (
-    <div className='projects'>
+    <div className={`projects ${themeIsDark && 'dark'}`}>
       <ul className='projects__list'>
         {
           projects.slice(0, projectsQuantity).map((item) => (
-            <ProjectCard item={item} key={item.id}  />
+            <ProjectCard item={item} key={item.id} />
           ))
         }
       </ul>

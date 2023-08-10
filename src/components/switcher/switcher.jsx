@@ -1,10 +1,11 @@
 import './switcher.css'
 
-function Switcher ({currentTab, onCurrentTab}) {
+function Switcher ({currentTab, onCurrentTab, themeIsDark}) {
   return (
-    <div className='switcher'>
-      <div className={`switcher__button ${(currentTab == 'Portfolio') ? 'isCurrent' : ''}`} onClick={() => onCurrentTab('Portfolio')}>Portfolio</div>
-      <div className={`switcher__button ${(currentTab == 'About') ? 'isCurrent' : ''}`} onClick={() => onCurrentTab('About')}>About</div>
+    <div className={`switcher ${themeIsDark && 'dark'}`}>
+      <span className={`switcher__tab ${(currentTab == 'Portfolio') ? '' : 'endPosition'}`} ></span>
+      <div className='switcher__button' onClick={() => onCurrentTab('Portfolio')}>Portfolio</div>
+      <div className='switcher__button' onClick={() => onCurrentTab('About')}>About</div>
     </div>
   )
 }

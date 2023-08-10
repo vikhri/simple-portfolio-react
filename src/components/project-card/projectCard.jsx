@@ -3,7 +3,7 @@ import './projectCard.css'
 function ProjectCard ({item}) {
   return (
     <li>
-      <article className='projectCard'>
+      <article className={`projectCard`}>
         <div className='projectCard__inner'>
           <figure>
            <a

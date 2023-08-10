@@ -1,6 +1,8 @@
 .button-bar {
   display: flex;
+  flex-wrap: wrap;
   column-gap: 12px;
+  row-gap: 12px;
   padding: 12px;
 }
 
@@ -8,15 +10,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   padding: 10px;
-  background-color: var(--main-color);
+  /*background-color: var(--main-color);*/
+  background: linear-gradient(to bottom right, blue, pink);
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--font-color-button);
+}
+
+
+.button-bar__contacts {
+  display: flex;
+  flex-grow: 1;
+  column-gap: 12px;
 }
 
 .button-bar__link--small {
-  max-width: 68px;
-  background-color: #FFFFFF;
+  flex-grow: 1;
+  background: none;
+  background-color: var(--bg-color--light-theme-secondary);
   color: var(--main-color);
+  transition: background-color 700ms ease-in-out;
+}
+
+.button-bar.dark {
+  .button-bar__link--small {
+    background-color: var(--bg-color--dark-theme-secondary);
+}
+}
+
+.button-bar__link--wide {
+  flex-grow: 3;
+  min-width: 260px;
 }

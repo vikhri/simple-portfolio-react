@@ -3,6 +3,11 @@
   align-items: center;
   column-gap: 1em;
   list-style: none;
+  transition: color 700ms ease-in-out;
+}
+
+.socials.dark {
+  color: var(--font-color-button)
 }
 
 .socials__link {

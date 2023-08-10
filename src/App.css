@@ -1,5 +1,63 @@
+@layer dark, light;
+
+@layer light {
+  :root {
+    --main-color: #9966cc;}
+}
+
+@layer dark {
+  :root {
+    --main-color: red;}
+}
+
+:root {
+
+  --main-color: #9966cc;
+
+  --bg-color--light-theme: #f1f2f4;
+  --bg-color--light-theme-secondary: #ffffff;
+  --bg-color--dark-theme: #0c151d;
+  --bg-color--dark-theme-secondary: #171F26;
+
+  --font-color-light-theme: #0c151d;
+  --font-color-dark-theme: #FFFFFF;
+
+  --font-color-button: #ffffff;
+
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 .app {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
+  background-color: var(--bg-color--light-theme);
+  transition: background-color 700ms ease-in-out;
+}
+
+.app.dark {
+  background-color: var(--bg-color--dark-theme);
 }

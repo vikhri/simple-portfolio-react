@@ -10,3 +10,9 @@
 
   background-color: inherit;
 }
+
+@media(max-width: 480px) {
+  .main__container {
+    padding: 2vw;
+  }
+}

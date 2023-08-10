@@ -1,22 +1,22 @@
 import './header.css'
 
-function Header() {
+function Header({onToggleTheme, themeIsDark}) {
 
   return (
-    <div className='header container'>
+    <div className={`header container ${themeIsDark && 'dark'}`}>
       <div className='header__logo-container'>
-        <img className='header__logo' src='../../src/assets/iv-logo-2.jpg' alt='Logo'/>
+        <img className='header__logo' src='../../src/assets/iv-logo-2.png' alt='Logo'/>
       </div>
-      <Mode/>
+      <Mode onToggleTheme={onToggleTheme}/>
     </div>
   )
 }
 
 
-function Mode() {
+function Mode({onToggleTheme}) {
   return (
-    <div className='mode__circle'>
-      <span className='mode__icon'>L</span>
+    <div className='mode__circle' onClick={onToggleTheme}>
+      <span className='mode__icon'></span>
     </div>
   )
 }

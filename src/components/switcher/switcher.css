@@ -1,12 +1,38 @@
 .switcher {
+  position: relative;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 12px;
   padding: 12px;
 
-  background-color: #FFFFFF;
+  background-color: var(--bg-color--light-theme-secondary);
   border-radius: 16px;
+  transition: background-color 700ms ease-in-out;
+}
+
+.switcher.dark {
+  background-color: var(--bg-color--dark-theme-secondary);
+  .switcher__tab {
+  background-color: var(--bg-color--dark-theme);
+  }
+}
+
+.switcher__tab {
+  position: absolute;
+  z-index: 2;
+  content: '';
+  top: 12%;
+  left: 2%;
+  width: 47%;
+  height: 76%;
+  background-color: var(--bg-color--light-theme);
+  border-radius: 12px;
+  transition: left 0.3s ease-in-out, background-color 700ms ease-in-out;
+}
+
+.switcher__tab.endPosition {
+  left: 51%;
 }
 
 .switcher__button {
@@ -17,9 +43,5 @@
   border-radius: 10px;
 
   color: var(--main-color);
-}
-
-.isCurrent {
-  background-color: #f1f2f4;
-
+  z-index: 3;
 }

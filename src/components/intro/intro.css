@@ -3,6 +3,12 @@
   flex-wrap: wrap;
   column-gap: 2em;
   padding: 13px;
+  color: var(--font-color-light-theme);
+  transition: color 700ms ease-in-out;
+}
+
+.intro.dark {
+  color: var(--font-color-dark-theme);
 }
 
 .intro__description {

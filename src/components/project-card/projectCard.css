@@ -13,6 +13,12 @@
 }
 
 .projectCard__title {
+  color: var(--font-color-light-theme);
   font-size: 18px;
   font-weight: 500;
+}
+
+.projects.dark {
+  .projectCard__title {
+    color: var(--font-color-dark-theme);
 }

@@ -4,16 +4,26 @@
   row-gap: 16px;
 }
 
+.projects.dark {
+  .projects__list {
+    background-color: var(--bg-color--dark-theme-secondary);
+  }
+}
+
+.projects.dark * > a {
+  color: #FFFFFF;
+}
+
 .projects__list {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 24px;
   row-gap: 24px;
-  list-style: none;
-  background-color: #FFFFFF;
   padding: 12px 12px 40px;
-
+  list-style: none;
+  background-color: var(--bg-color--light-theme-secondary);
+  transition: background-color 700ms ease-in-out;
 }
 
 @media (max-width: 500px) {

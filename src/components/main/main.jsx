@@ -7,7 +7,7 @@ import Switcher from "../switcher/switcher.jsx";
 import About from "../about/about.jsx";
 
 
-function Main() {
+function Main({themeIsDark}) {
 
   const [currentTab, setCurrentTab] = useState('Portfolio');
 
@@ -17,17 +17,17 @@ function Main() {
 
   return (
     <div className='main__container'>
-      <Intro />
-      <ButtonBar/>
-      <Switcher currentTab={currentTab} onCurrentTab={HandleCurrentTab}/>
-      <Content currentTab={currentTab}/>
+      <Intro themeIsDark={themeIsDark}/>
+      <ButtonBar themeIsDark={themeIsDark}/>
+      <Switcher themeIsDark={themeIsDark} currentTab={currentTab} onCurrentTab={HandleCurrentTab}/>
+      <Content themeIsDark={themeIsDark} currentTab={currentTab}/>
     </div>
   )
 }
 
-function Content ({currentTab}) {
-  if (currentTab == 'Portfolio')  return (<ProjectsList />)
-    else return (<About />);
+function Content ({currentTab, themeIsDark}) {
+  if (currentTab == 'Portfolio')  return (<ProjectsList themeIsDark={themeIsDark}/>)
+    else return (<About themeIsDark={themeIsDark}/>);
 
 }
 export default Main
