@@ -17,6 +17,9 @@
   color: var(--font-color-button);
 }
 
+.button-bar__link:hover {
+  filter: brightness(90%);
+}
 
 .button-bar__contacts {
   display: flex;

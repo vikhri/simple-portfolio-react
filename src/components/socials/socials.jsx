@@ -30,7 +30,7 @@ function Socials({themeIsDark}) {
 function SocialsItem({item, themeIsDark}) {
   return (
     <li className='socials__item'>
-      <a className='socials__link'
+      <a tabIndex={2} className='socials__link'
         href={item.link}>
         <img src={themeIsDark ? item.iconDark : item.iconLight}/>
       </a>

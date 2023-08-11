@@ -13,6 +13,10 @@
   background-color: var(--bg-color--dark-theme-secondary);
 }
 
+.header.dark * > button {
+  color: #FFFFFF;
+}
+
 .header__logo-container {
   width: 3em;
 }
@@ -22,6 +26,10 @@
   object-fit: contain;
 }
 
+.header__toolbar {
+  display: flex;
+  column-gap: 30px;
+}
 
 .mode__circle {
   width: 2em;
@@ -51,4 +59,20 @@
   .mode__icon {
     background-image: url(../../src/assets/dark-theme.png);
   }
+}
+
+.langSwitch__button {
+  display: grid;
+  grid-template-columns: 27px 10px 27px;
+  align-items: center;
+}
+
+.larger {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.smaller {
+  font-size: smaller;
+  font-weight: bold;
 }

@@ -55,7 +55,7 @@ const projects = [
   },
 ]
 
-function ProjectsList({themeIsDark}) {
+function ProjectsList({themeIsDark, dict}) {
 
   const [projectsQuantity, setProjectQuantity] = useState(4);
 
@@ -75,7 +75,7 @@ function ProjectsList({themeIsDark}) {
         }
       </ul>
 
-      <Button className='projects__button' onLoadMore={HandleLoadMore}><span className="" style={{textAlign: "center"}}>{(projects.length <= projectsQuantity) ? 'That`s it :)' : 'Load more'}</span></Button>
+      <Button className='projects__button' onLoadMore={HandleLoadMore}><span style={{textAlign: "center"}}>{(projects.length <= projectsQuantity) ? `${dict.endOfList}` : `${dict.loadMore}`}</span></Button>
     </div>
   )
 }

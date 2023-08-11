@@ -1,104 +1,42 @@
 import './about.css'
 
-function About({themeIsDark}) {
+function About({themeIsDark, dict}) {
 
-  const skills = {
-    hardSkills: [
-      { name: 'HTML5',
-        img: '../../src/assets/hard/html.png',
-        tags: '',
-        bgColor: 'darkorange',
-      },
-      { name: 'PUG',
-        img: '../../src/assets/hard/pug.png',
-        tags: '',
-        bgColor: 'white',
-      },
-      { name: 'CSS3',
-        img: '../../src/assets/hard/css.png',
-        tags: '',
-        bgColor: '#35a8db'
-      },
-      { name: 'POSTCSS',
-        img: '../../src/assets/hard/pcss.png',
-        tags: '',
-        bgColor: 'black'
-      },
-      { name: 'Sass',
-        img: '../../src/assets/hard/sass.png',
-        tags: '',
-        bgColor: 'white'
-      },
-      { name: 'Vanila JS',
-        img: '../../src/assets/hard/js.png',
-        tags: '',
-        bgColor: '#f0db4f'
-      },
-      { name: 'REACT JS',
-        img: '../../src/assets/hard/react.png',
-        tags: '',
-        bgColor: 'black'
-      },
-      { name: 'GIT',
-        img: '../../src/assets/hard/git.png',
-        tags: '',
-        bgColor: 'white'
-      },
-      { name: 'WEBPACK',
-        img: '../../src/assets/hard/wp.png',
-        tags: '',
-        bgColor: 'white'
-      },
-      { name: 'VITE',
-        img: '../../src/assets/hard/vite.png',
-        tags: '',
-        bgColor: 'white'
-      },
-      { name: 'Figma',
-        img: '../../src/assets/hard/figma.png',
-        tags: '',
-        bgColor: 'white'
-      }],
-    softSkills: ['Fast Learning', 'Empathy', 'Time management', 'Team work', 'Responsibility']
-  }
 
   return (
     <div className={`about ${themeIsDark && 'dark'}`}>
       <div className='about__prolog'>
-        <p>About About About bout About About bout About About bout About About bout About About bout About Aboutbout About About</p>
+        <p>{dict.aboutDesc}</p>
       </div>
       <div className='about__experience'>
-        <h2 className='about__list-title'>Work Experience</h2>
+        <h2 className='about__list-title'>{dict.workExp}</h2>
         <ul className='about__list'>
           <li className='about__item'>
-            <span className='about__dates'>Present</span>
-            <h3 className='about__item-title'>Frontend developer</h3>
-            <p className='about__company'>Optimal Group</p>
-            <p className='about__description'>desc desc desc desc descdesc desc desc</p>
+            <span className='about__dates'>{dict.present}</span>
+            <h3 className='about__item-title'>{dict.workPosition1}</h3>
+            <p className='about__company'>{dict.employer1}</p>
+            <p className='about__description'>{dict.workDesс1}</p>
           </li>
         </ul>
       </div>
       <div className='about__education'>
-        <h2 className='about__list-title'>Education</h2>
+        <h2 className='about__list-title'>{dict.educationTitle}</h2>
         <ul className='about__list about__list--two-columns'>
-          <li className='about__item'>
-            <span className='about__dates'>Present</span>
-            <h3 className='about__item-title'>HTML</h3>
-            <p className='about__company'>HTML-academy</p>
-            <p className='about__description'>desc desc desc desc descdesc desc desc</p>
-          </li>
-          <li className='about__item'>
-            <span className='about__dates'>Present</span>
-            <h3 className='about__item-title'>JS professional</h3>
-            <p className='about__company'>Udemy</p>
-            <p className='about__description'>desc desc desc desc descdesc desc desc</p>
-          </li>
+          { dict.education.map((school, i) => (
+              <li className='about__item' key={i} >
+                <span className='about__dates'>{school.dates}</span>
+                <h3 className='about__item-title'>{school.course}</h3>
+                <p className='about__company'>{school.place}</p>
+                <p className='about__description'>{school.desc}</p>
+              </li>
+            ))
+          }
         </ul>
       </div>
       <div className='about__hard-skills'>
         <h2 className='about__list-title'>Hard Skills</h2>
         <ul className='about__list about__list--four-columns'>
-          {skills.hardSkills.map((item) => (
+          {dict.hardSkills.map((item) => (
             <HardSkill item={item} key={item.name}/>
           ))}
 
@@ -107,7 +45,7 @@ function About({themeIsDark}) {
       <div className='about__soft-skills'>
         <h2 className='about__list-title'>Soft Skills</h2>
         <ul className='about__list about__list--two-columns'>
-          {skills.softSkills.map((item, i) => (
+          {dict.softSkills.map((item, i) => (
             <li className='about__skills-item soft-skill' key={i}>
               <p className='soft-skill__name'>{item}</p>
             </li>

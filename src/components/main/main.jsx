@@ -7,7 +7,8 @@ import Switcher from "../switcher/switcher.jsx";
 import About from "../about/about.jsx";
 
 
-function Main({themeIsDark}) {
+// eslint-disable-next-line react/prop-types
+function Main({themeIsDark, dict}) {
 
   const [currentTab, setCurrentTab] = useState('Portfolio');
 
@@ -17,17 +18,18 @@ function Main({themeIsDark}) {
 
   return (
     <div className='main__container'>
-      <Intro themeIsDark={themeIsDark}/>
-      <ButtonBar themeIsDark={themeIsDark}/>
-      <Switcher themeIsDark={themeIsDark} currentTab={currentTab} onCurrentTab={HandleCurrentTab}/>
-      <Content themeIsDark={themeIsDark} currentTab={currentTab}/>
+      <Intro themeIsDark={themeIsDark} dict={dict}/>
+      <ButtonBar themeIsDark={themeIsDark} dict={dict}/>
+      <Switcher themeIsDark={themeIsDark} currentTab={currentTab} onCurrentTab={HandleCurrentTab} dict={dict}/>
+      <Content themeIsDark={themeIsDark} currentTab={currentTab} dict={dict}/>
     </div>
   )
 }
 
-function Content ({currentTab, themeIsDark}) {
-  if (currentTab == 'Portfolio')  return (<ProjectsList themeIsDark={themeIsDark}/>)
-    else return (<About themeIsDark={themeIsDark}/>);
+// eslint-disable-next-line react/prop-types
+function Content ({currentTab, themeIsDark, dict}) {
+  if (currentTab == 'Portfolio')  return (<ProjectsList themeIsDark={themeIsDark} dict={dict}/>)
+    else return (<About themeIsDark={themeIsDark} dict={dict}/>);
 
 }
 export default Main

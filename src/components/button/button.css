@@ -1,15 +1,21 @@
+button {
+  border: none;
+  background: transparent;
+}
+
 .button {
   padding: 12px 24px;
   /*background-color: var(--main-color);*/
-  background: linear-gradient(to bottom right, blue, pink);
   border: none;
   border-radius: 8px;
   color: var(--font-color-button);
-  transition: background 2s linear;
+
+  background: linear-gradient(to right bottom, blue, pink);
+
 }
 
 .button:hover {
-  background: linear-gradient(to top right, blue, pink);
+  filter: brightness(90%);
 }
 
 .button__container {
