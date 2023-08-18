@@ -5,13 +5,13 @@ const socialList = [
     name:'GitHub',
     iconDark: '../../src/assets/socials/github-dark.svg',
     iconLight: '../../src/assets/socials/github-light.svg',
-    link: 'github.com/vikhri/'
+    link: 'https://github.com/vikhri/'
   },
   {
     name:'Instagram',
     iconDark: '../../src/assets/socials/instagram-dark.svg',
     iconLight: '../../src/assets/socials/instagram-light.svg',
-    link: 'instagram.com/ivikhrova'
+    link: 'https://instagram.com/ivikhrova'
   }
 ]
 
@@ -31,7 +31,9 @@ function SocialsItem({item, themeIsDark}) {
   return (
     <li className='socials__item'>
       <a tabIndex={2} className='socials__link'
-        href={item.link}>
+        href={item.link}
+        target='_blank'
+      >
         <img src={themeIsDark ? item.iconDark : item.iconLight}/>
       </a>
     </li>
