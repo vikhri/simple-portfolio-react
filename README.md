@@ -1,4 +1,5 @@
-# React + Vite
+# Страничка портфолио/резюме на Реакте 
+# Portfolio / CV-page with React JS
 
 to run project: 
 
