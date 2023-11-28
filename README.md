@@ -2,4 +2,4 @@
 
 to run project: 
 
-npm run dev or vite
+```npm run dev``` or ```vite```
