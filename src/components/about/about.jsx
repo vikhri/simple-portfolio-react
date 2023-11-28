@@ -2,7 +2,6 @@ import './about.css'
 
 function About({themeIsDark, dict}) {
 
-
   return (
     <div className={`about ${themeIsDark && 'dark'}`}>
       <div className='about__prolog'>

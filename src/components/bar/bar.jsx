@@ -2,9 +2,9 @@ import './bar.css'
 function ButtonBar({themeIsDark, dict}) {
   return (
     <div className={`button-bar ${themeIsDark && 'dark'}`}>
-      <a className='button-bar__link button-bar__link--wide' href='/' tabIndex={3}>{dict.cv}</a>
+      <a className='button-bar__link button-bar__link--wide' href='/public/cv-vikhrova.pdf' tabIndex={3}>{dict.cv}</a>
       <div className='button-bar__contacts'>
-      <a className='button-bar__link button-bar__link--small' href='mailto:vikhrova.irina@gmail.com' target='_blank' tabIndex={4}>✉</a>
+      <a className='button-bar__link button-bar__link--small' href='mailto:irina.vikhrova@proton.me' target='_blank' tabIndex={4}>✉</a>
       <a className='button-bar__link button-bar__link--small' href='https://t.me/irina_vikhrova' target='_blank' tabIndex={5}>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-telegram"
              viewBox="0 0 16 16">

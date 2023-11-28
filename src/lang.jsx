@@ -34,7 +34,7 @@ const dictionary = {
     jobDesc: '',
     workExp: 'Опыт работы',
     workPosition1: 'Frontend разработчик',
-    workDesс1: 'Занимаюсь вёрсткой, делаю анимации на css',
+    workDesс1: 'Занимаюсь вёрсткой, делаю анимации на pcss',
     employer1: 'Optimal Group, Москва',
     educationTitle: 'Обучение',
     education:
@@ -70,7 +70,7 @@ const dictionary = {
         bgColor: 'white',
       },
       { name: 'CSS3',
-        img: '../../src/assets/hard/css.png',
+        img: '../../src/assets/hard/pcss.png',
         tags: '',
         bgColor: '#35a8db'
       },
@@ -129,7 +129,7 @@ const dictionary = {
     jobDesc: '',
     workExp: 'Work Experience',
     workPosition1: 'Frontend Developer',
-    workDesс1: 'My work involves crafting user interfaces using HTML, CSS, Vanilla JS. Like creating small animations on css',
+    workDesс1: 'My work involves crafting user interfaces using HTML, CSS, Vanilla JS. Like creating small animations on pcss',
     employer1: 'Optimal Group, Moscow',
     educationTitle: 'Education',
     education: [
@@ -165,7 +165,7 @@ const dictionary = {
         bgColor: 'white',
       },
       { name: 'CSS3',
-        img: '../../src/assets/hard/css.png',
+        img: '../../src/assets/hard/pcss.png',
         tags: '',
         bgColor: '#35a8db'
       },

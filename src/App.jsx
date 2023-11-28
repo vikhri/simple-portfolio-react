@@ -19,7 +19,6 @@ function HandleToggleTheme() {
 }
 
 
-
   return (
     <div className={`app ${themeIsDark && 'dark'}`}>
       <Header onToggleTheme={HandleToggleTheme} themeIsDark={themeIsDark} onLangSwitch={HandleLangSwitch} langIsRu={langIsRu}/>
